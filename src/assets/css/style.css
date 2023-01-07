@@ -368,26 +368,25 @@ textarea:focus {
 
 .glazing_block {
   display: inline-block;
+  cursor: pointer;
 }
 
 .glazing_block img {
   display: block;
   margin: 0 auto;
   margin-bottom: 2rem;
+  pointer-events: none;
 }
 
 .glazing_block a {
   font-size: 1.8rem;
   font-weight: 600;
   text-decoration: underline;
+  pointer-events: none;
   /*&:focus {
 				text-decoration: none;
 				color: #454545;
 			}*/
-}
-
-.glazing_block a:hover {
-  cursor: pointer;
 }
 
 .glazing_cold {
@@ -1099,6 +1098,10 @@ textarea:focus {
 
 .show {
   display: block;
+}
+
+.hide {
+  display: none;
 }
 
 /*Media*/
