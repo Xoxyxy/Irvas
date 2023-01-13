@@ -3,9 +3,11 @@ import { modals } from './modules/modals'
 import { tabs } from './modules/tabs'
 import { forms } from './modules/forms'
 import { calculator } from './modules/calculator'
+import { timer } from './modules/timer'
 
 document.addEventListener('DOMContentLoaded', () => {
   let modalState = {}
+  let deadline = '2023-02-1'
 
   modals()
   tabs('.glazing_slider', '.glazing_block', '.glazing_content', 'active')
@@ -13,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
   tabs('.balcon_icons', '.balcon_icons_img', '.big_img > img', 'do_image_more')
   forms('form', 'input', modalState)
   calculator(modalState)
+  timer('.container1', deadline)
 })
