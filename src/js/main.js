@@ -4,6 +4,7 @@ import { tabs } from './modules/tabs'
 import { forms } from './modules/forms'
 import { calculator } from './modules/calculator'
 import { timer } from './modules/timer'
+import { images } from './modules/images'
 
 document.addEventListener('DOMContentLoaded', () => {
   let modalState = {}
@@ -16,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   forms('form', 'input', modalState)
   calculator(modalState)
   timer('.container1', deadline)
+  images()
 })

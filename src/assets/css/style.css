@@ -1104,8 +1104,18 @@ textarea:focus {
   display: inline-block;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hide {
   display: none;
+}
+
+.max {
+  max-width: 370px;
 }
 
 /*Media*/
