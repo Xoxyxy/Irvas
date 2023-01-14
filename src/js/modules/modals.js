@@ -1,3 +1,5 @@
+import { calcScroll } from './calcScroll'
+
 function modals() {
   const body = document.body
 
@@ -5,7 +7,8 @@ function modals() {
     const btn = document.querySelectorAll(btnSelector),
       modal = document.querySelector(modalSelector),
       close = document.querySelector(closeSelector),
-      windows = document.querySelectorAll('[data-modal]')
+      windows = document.querySelectorAll('[data-modal]'),
+      scroll = calcScroll()
 
     function windowsHide() {
       windows.forEach(window => {
@@ -17,15 +20,17 @@ function modals() {
     function showModal(element) {
       windowsHide()
 
-      element.classList.add('show')
+      element.classList.add('show', 'fadedModals')
       body.classList.add('modal-open')
+      body.style.marginRight = scroll + 'px'
     }
 
     function hideModal(element) {
       windowsHide()
 
-      element.classList.remove('show')
+      element.classList.remove('show', 'fadedModals')
       body.classList.remove('modal-open')
+      body.style.marginRight = ''
     }
 
     btn.forEach(btn => {
@@ -54,8 +59,9 @@ function modals() {
 
   function showModalByTime(selector, time) {
     setTimeout(function () {
-      document.querySelector(selector).classList.add('show')
+      document.querySelector(selector).classList.add('show', 'fadedModals')
       body.classList.add('modal-open')
+      body.style.marginRight = scroll + 'px'
     }, time)
   }
 

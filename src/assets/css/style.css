@@ -18,6 +18,34 @@ body {
   color: red;
 }
 
+.fadedTabs {
+  animation: fadedTabs .4s;
+}
+
+@keyframes fadedTabs {
+  from {
+    opacity: .3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadedModals {
+  animation: fadedModals .3s;
+}
+
+@keyframes fadedModals {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 a:hover {
   text-decoration: none;
 }

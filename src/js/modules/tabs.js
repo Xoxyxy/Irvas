@@ -10,13 +10,13 @@ function tabs(headerSelector, tabsSelector, contentSelector, activeClass) {
 
     content.forEach(content => {
       content.classList.add('hide')
-      content.classList.remove('show')
+      content.classList.remove('show', 'fadedTabs')
     })
   }
 
   function showContent(i = 0) {
     content[i].classList.remove('hide')
-    content[i].classList.add('show')
+    content[i].classList.add('show', 'fadedTabs')
     tab[i].classList.add(activeClass)
   }
 
